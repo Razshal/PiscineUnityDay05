@@ -7,6 +7,7 @@ public class BallScript : MonoBehaviour {
     new private Rigidbody rigidbody;
     public GameObject forceBar;
     new private GameObject camera;
+    public bool replaceCam = false;
 
 
     void Start () {
@@ -19,10 +20,12 @@ public class BallScript : MonoBehaviour {
     {
         if (rigidbody.velocity.Equals(Vector3.zero))
         {
-            if (Input.GetKeyDown(KeyCode.Space) && !forceBar.activeSelf)
+            if (!replaceCam)
             {
-                forceBar.SetActive(true);
+                camera.GetComponent<CameraScript>().ReplaceToball();
+                replaceCam = true;
             }
+
             if (forceBar.activeSelf)
                 transform.rotation = camera.transform.rotation;
         }

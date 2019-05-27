@@ -20,6 +20,7 @@ public class ForceBarScript : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ball.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * slider.value * forceMultiplier);
+            ball.GetComponent<BallScript>().replaceCam = false;
             gameObject.SetActive(false);
         }
     }

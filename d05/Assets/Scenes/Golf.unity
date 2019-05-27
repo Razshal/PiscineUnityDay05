@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &133097284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -849,8 +849,8 @@ RectTransform:
   m_Father: {fileID: 837322584}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1169,7 +1169,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 857850463}
   m_LocalRotation: {x: -0, y: 0.691387, z: -0, w: 0.7224846}
-  m_LocalPosition: {x: 245.97, y: 113.2, z: 337.23}
+  m_LocalPosition: {x: 244.85, y: 114.86, z: 362.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1196,7 +1196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1
   rotateSpeed: 2
-  isLocked: 0
+  isLocked: 1
+  forceBar: {fileID: 133097283}
 --- !u!135 &857850470
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1536,7 +1537,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1802,7 +1803,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4954200959700736, guid: 2351d9f5650c246e8b4addfc040a2ec9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 268.3
+      value: 267.65
       objectReference: {fileID: 0}
     - target: {fileID: 4954200959700736, guid: 2351d9f5650c246e8b4addfc040a2ec9, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1810,7 +1811,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4954200959700736, guid: 2351d9f5650c246e8b4addfc040a2ec9, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 333.8
+      value: 331.67
       objectReference: {fileID: 0}
     - target: {fileID: 4954200959700736, guid: 2351d9f5650c246e8b4addfc040a2ec9, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1818,7 +1819,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4954200959700736, guid: 2351d9f5650c246e8b4addfc040a2ec9, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.14806834
       objectReference: {fileID: 0}
     - target: {fileID: 4954200959700736, guid: 2351d9f5650c246e8b4addfc040a2ec9, type: 2}
       propertyPath: m_LocalRotation.z
@@ -1826,7 +1827,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4954200959700736, guid: 2351d9f5650c246e8b4addfc040a2ec9, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.98897713
       objectReference: {fileID: 0}
     - target: {fileID: 4954200959700736, guid: 2351d9f5650c246e8b4addfc040a2ec9, type: 2}
       propertyPath: m_RootOrder
@@ -1841,11 +1842,24 @@ Prefab:
     - target: {fileID: 54887020612051892, guid: 2351d9f5650c246e8b4addfc040a2ec9,
         type: 2}
       propertyPath: m_AngularDrag
-      value: 0.1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 54887020612051892, guid: 2351d9f5650c246e8b4addfc040a2ec9,
         type: 2}
       propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954200959700736, guid: 2351d9f5650c246e8b4addfc040a2ec9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954200959700736, guid: 2351d9f5650c246e8b4addfc040a2ec9, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 17.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 54887020612051892, guid: 2351d9f5650c246e8b4addfc040a2ec9,
+        type: 2}
+      propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1869,3 +1883,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveHole: {fileID: 472239209}
   forceBar: {fileID: 133097283}
+  replaceCam: 0
