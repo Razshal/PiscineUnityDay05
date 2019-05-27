@@ -8,9 +8,15 @@ public class CameraScript : MonoBehaviour {
     private float pitch = 0.0f;
     public float speedY = 2.0f;
     public float speedX = 2.0f;
+    private GameObject ball;
 
-    // Update is called once per frame
-    void Update()
+	private void Start()
+	{
+        ball = GameObject.Find("Ball");
+	}
+
+	// Update is called once per frame
+	void Update()
     {
         Vector3 Direction = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Jump"), Input.GetAxis("Vertical"));
         transform.Translate(Direction * movementSpeed);
