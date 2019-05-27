@@ -3,14 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BallScript : MonoBehaviour {
-    private GameObject mainCamera;
+    public GameObject objectiveHole;
+    new private Rigidbody rigidbody;
+    public GameObject forceBar;
+    new private GameObject camera;
 
-	void Start () {
-        mainCamera = Camera.main.gameObject;
+
+    void Start () {
+        gameObject.transform.LookAt(objectiveHole.transform.position);
+        rigidbody = gameObject.GetComponent<Rigidbody>();
+        camera = Camera.main.gameObject;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-        transform.rotation = mainCamera.transform.rotation;
-	}
+
+    private void FixedUpdate()
+    {
+        if (rigidbody.velocity.Equals(Vector3.zero))
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && !forceBar.activeSelf)
+            {
+                forceBar.SetActive(true);
+            }
+            if (forceBar.activeSelf)
+                transform.rotation = camera.transform.rotation;
+        }
+    }
 }

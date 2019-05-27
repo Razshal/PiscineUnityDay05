@@ -5,15 +5,15 @@ PhysicsManager:
   m_ObjectHideFlags: 0
   serializedVersion: 7
   m_Gravity: {x: 0, y: -9.81, z: 0}
-  m_DefaultMaterial: {fileID: 0}
+  m_DefaultMaterial: {fileID: 13400000, guid: a46412686b49e904d9eb389b593a4366, type: 2}
   m_BounceThreshold: 2
-  m_SleepThreshold: 0.005
+  m_SleepThreshold: 0.01
   m_DefaultContactOffset: 0.01
-  m_DefaultSolverIterations: 6
+  m_DefaultSolverIterations: 15
   m_DefaultSolverVelocityIterations: 1
   m_QueriesHitBackfaces: 0
   m_QueriesHitTriggers: 1
-  m_EnableAdaptiveForce: 0
+  m_EnableAdaptiveForce: 1
   m_ClothInterCollisionDistance: 0
   m_ClothInterCollisionStiffness: 0
   m_ContactsGeneration: 1
