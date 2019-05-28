@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallScript : MonoBehaviour {
+public class BallScript : MonoBehaviour
+{
     public GameObject objectiveHole;
     new private Rigidbody rigidbody;
     public GameObject forceBar;
@@ -10,11 +11,12 @@ public class BallScript : MonoBehaviour {
     public bool replaceCam = false;
 
 
-    void Start () {
+    void Start()
+    {
         gameObject.transform.LookAt(objectiveHole.transform.position);
         rigidbody = gameObject.GetComponent<Rigidbody>();
         camera = Camera.main.gameObject;
-	}
+    }
 
     private void FixedUpdate()
     {

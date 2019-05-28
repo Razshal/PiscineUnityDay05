@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ForceBarScript : MonoBehaviour {
+public class ForceBarScript : MonoBehaviour
+{
     public Slider slider;
     private GameObject ball;
     private bool up = true;
     public float forceMultiplier = 10;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
         ball = GameObject.Find("Ball");
-	}
+    }
 
     private void FixedUpdate()
     {
@@ -26,7 +27,7 @@ public class ForceBarScript : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         slider.value = up ? slider.value + 1 : slider.value - 1;
 

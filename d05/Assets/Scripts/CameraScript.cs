@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CameraScript : MonoBehaviour {
+public class CameraScript : MonoBehaviour
+{
     public float movementSpeed = 1;
     public float rotateSpeed = 2.0f;
     private Vector3 direction;
